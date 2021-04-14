@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailDownloader", "MailDownl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailDownloaderConsoleTest", "MailDownloaderConsoleTest\MailDownloaderConsoleTest.csproj", "{B9DBE298-BD12-4BD5-B64A-65A2E6A866DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSorter", "MailSorter\MailSorter.csproj", "{E5609FF8-45D2-4EF0-8010-963E84F13896}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B9DBE298-BD12-4BD5-B64A-65A2E6A866DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9DBE298-BD12-4BD5-B64A-65A2E6A866DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9DBE298-BD12-4BD5-B64A-65A2E6A866DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5609FF8-45D2-4EF0-8010-963E84F13896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5609FF8-45D2-4EF0-8010-963E84F13896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5609FF8-45D2-4EF0-8010-963E84F13896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5609FF8-45D2-4EF0-8010-963E84F13896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
