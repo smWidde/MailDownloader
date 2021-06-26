@@ -28,254 +28,458 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.settings_btn = new System.Windows.Forms.Button();
+            this.threads_lbl = new System.Windows.Forms.Label();
+            this.threads_tb = new System.Windows.Forms.TextBox();
+            this.start_btn = new System.Windows.Forms.Button();
+            this.stop_btn = new System.Windows.Forms.Button();
+            this.left_btn = new System.Windows.Forms.Button();
+            this.accounts_lbl = new System.Windows.Forms.Label();
+            this.accounts_tb = new System.Windows.Forms.TextBox();
+            this.valid_tb = new System.Windows.Forms.TextBox();
+            this.valid_lbl = new System.Windows.Forms.Label();
+            this.invalid_tb = new System.Windows.Forms.TextBox();
+            this.invalid_lbl = new System.Windows.Forms.Label();
+            this.files_tb = new System.Windows.Forms.TextBox();
+            this.files_lbl = new System.Windows.Forms.Label();
+            this.valid_btn = new System.Windows.Forms.Button();
+            this.files_btn = new System.Windows.Forms.Button();
+            this.invalid_btn = new System.Windows.Forms.Button();
+            this.mail_pass_buffer = new System.Windows.Forms.Button();
+            this.mail_pass_file = new System.Windows.Forms.Button();
+            this.left_btn2 = new System.Windows.Forms.Button();
+            this.left_tb = new System.Windows.Forms.TextBox();
+            this.left_lbl = new System.Windows.Forms.Label();
+            this.macAddresses = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.adress_lbl = new System.Windows.Forms.Label();
+            this.address_tb = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.proxy_type_group = new System.Windows.Forms.GroupBox();
+            this.proxy_type2 = new System.Windows.Forms.RadioButton();
+            this.proxy_type1 = new System.Windows.Forms.RadioButton();
+            this.proxy_type_group.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // settings_btn
+            // 
+            this.settings_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.settings_btn.Location = new System.Drawing.Point(220, 19);
+            this.settings_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.settings_btn.Name = "settings_btn";
+            this.settings_btn.Size = new System.Drawing.Size(195, 246);
+            this.settings_btn.TabIndex = 1;
+            this.settings_btn.Text = "Настройки";
+            this.settings_btn.UseVisualStyleBackColor = true;
+            this.settings_btn.Click += new System.EventHandler(this.settings_btn_Click);
+            // 
+            // threads_lbl
+            // 
+            this.threads_lbl.AutoSize = true;
+            this.threads_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.threads_lbl.Location = new System.Drawing.Point(87, 409);
+            this.threads_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.threads_lbl.Name = "threads_lbl";
+            this.threads_lbl.Size = new System.Drawing.Size(56, 17);
+            this.threads_lbl.TabIndex = 3;
+            this.threads_lbl.Text = "Потоки";
+            // 
+            // threads_tb
+            // 
+            this.threads_tb.Location = new System.Drawing.Point(221, 404);
+            this.threads_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.threads_tb.Name = "threads_tb";
+            this.threads_tb.Size = new System.Drawing.Size(193, 26);
+            this.threads_tb.TabIndex = 4;
+            // 
+            // start_btn
+            // 
+            this.start_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.start_btn.Location = new System.Drawing.Point(16, 440);
+            this.start_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.start_btn.Name = "start_btn";
+            this.start_btn.Size = new System.Drawing.Size(195, 78);
+            this.start_btn.TabIndex = 5;
+            this.start_btn.Text = "Старт";
+            this.start_btn.UseVisualStyleBackColor = true;
+            this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
+            // 
+            // stop_btn
+            // 
+            this.stop_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.stop_btn.Location = new System.Drawing.Point(220, 440);
+            this.stop_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stop_btn.Name = "stop_btn";
+            this.stop_btn.Size = new System.Drawing.Size(195, 78);
+            this.stop_btn.TabIndex = 6;
+            this.stop_btn.Text = "Стоп";
+            this.stop_btn.UseVisualStyleBackColor = true;
+            this.stop_btn.Click += new System.EventHandler(this.stop_btn_Click);
+            // 
+            // left_btn
+            // 
+            this.left_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.left_btn.Location = new System.Drawing.Point(17, 526);
+            this.left_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.left_btn.Name = "left_btn";
+            this.left_btn.Size = new System.Drawing.Size(397, 78);
+            this.left_btn.TabIndex = 7;
+            this.left_btn.Text = "Остаток";
+            this.left_btn.UseVisualStyleBackColor = true;
+            this.left_btn.Click += new System.EventHandler(this.left_btn_Click);
+            // 
+            // accounts_lbl
+            // 
+            this.accounts_lbl.AutoSize = true;
+            this.accounts_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.accounts_lbl.Location = new System.Drawing.Point(466, 417);
+            this.accounts_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.accounts_lbl.Name = "accounts_lbl";
+            this.accounts_lbl.Size = new System.Drawing.Size(76, 17);
+            this.accounts_lbl.TabIndex = 10;
+            this.accounts_lbl.Text = "Аккаунтов";
+            // 
+            // accounts_tb
+            // 
+            this.accounts_tb.Location = new System.Drawing.Point(641, 406);
+            this.accounts_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.accounts_tb.Name = "accounts_tb";
+            this.accounts_tb.ReadOnly = true;
+            this.accounts_tb.Size = new System.Drawing.Size(136, 26);
+            this.accounts_tb.TabIndex = 11;
+            // 
+            // valid_tb
+            // 
+            this.valid_tb.Location = new System.Drawing.Point(641, 446);
+            this.valid_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.valid_tb.Name = "valid_tb";
+            this.valid_tb.ReadOnly = true;
+            this.valid_tb.Size = new System.Drawing.Size(136, 26);
+            this.valid_tb.TabIndex = 13;
+            // 
+            // valid_lbl
+            // 
+            this.valid_lbl.AutoSize = true;
+            this.valid_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.valid_lbl.Location = new System.Drawing.Point(466, 457);
+            this.valid_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.valid_lbl.Name = "valid_lbl";
+            this.valid_lbl.Size = new System.Drawing.Size(75, 17);
+            this.valid_lbl.TabIndex = 12;
+            this.valid_lbl.Text = "Валидные";
+            // 
+            // invalid_tb
+            // 
+            this.invalid_tb.Location = new System.Drawing.Point(641, 486);
+            this.invalid_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.invalid_tb.Name = "invalid_tb";
+            this.invalid_tb.ReadOnly = true;
+            this.invalid_tb.Size = new System.Drawing.Size(136, 26);
+            this.invalid_tb.TabIndex = 15;
+            // 
+            // invalid_lbl
+            // 
+            this.invalid_lbl.AutoSize = true;
+            this.invalid_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.invalid_lbl.Location = new System.Drawing.Point(466, 497);
+            this.invalid_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.invalid_lbl.Name = "invalid_lbl";
+            this.invalid_lbl.Size = new System.Drawing.Size(95, 17);
+            this.invalid_lbl.TabIndex = 14;
+            this.invalid_lbl.Text = "Не валидные";
+            // 
+            // files_tb
+            // 
+            this.files_tb.Location = new System.Drawing.Point(641, 566);
+            this.files_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.files_tb.Name = "files_tb";
+            this.files_tb.ReadOnly = true;
+            this.files_tb.Size = new System.Drawing.Size(136, 26);
+            this.files_tb.TabIndex = 17;
+            // 
+            // files_lbl
+            // 
+            this.files_lbl.AutoSize = true;
+            this.files_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.files_lbl.Location = new System.Drawing.Point(466, 577);
+            this.files_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.files_lbl.Name = "files_lbl";
+            this.files_lbl.Size = new System.Drawing.Size(60, 17);
+            this.files_lbl.TabIndex = 16;
+            this.files_lbl.Text = "Файлов";
+            // 
+            // valid_btn
+            // 
+            this.valid_btn.Enabled = false;
+            this.valid_btn.Location = new System.Drawing.Point(788, 446);
+            this.valid_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.valid_btn.Name = "valid_btn";
+            this.valid_btn.Size = new System.Drawing.Size(46, 32);
+            this.valid_btn.TabIndex = 21;
+            this.valid_btn.Text = "...";
+            this.valid_btn.UseVisualStyleBackColor = true;
+            this.valid_btn.Click += new System.EventHandler(this.filter_btn_Click);
+            // 
+            // files_btn
+            // 
+            this.files_btn.Enabled = false;
+            this.files_btn.Location = new System.Drawing.Point(788, 565);
+            this.files_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.files_btn.Name = "files_btn";
+            this.files_btn.Size = new System.Drawing.Size(46, 32);
+            this.files_btn.TabIndex = 23;
+            this.files_btn.Text = "...";
+            this.files_btn.UseVisualStyleBackColor = true;
+            this.files_btn.Click += new System.EventHandler(this.files_btn_Click);
+            // 
+            // invalid_btn
+            // 
+            this.invalid_btn.Enabled = false;
+            this.invalid_btn.Location = new System.Drawing.Point(788, 485);
+            this.invalid_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.invalid_btn.Name = "invalid_btn";
+            this.invalid_btn.Size = new System.Drawing.Size(46, 32);
+            this.invalid_btn.TabIndex = 22;
+            this.invalid_btn.Text = "...";
+            this.invalid_btn.UseVisualStyleBackColor = true;
+            this.invalid_btn.Click += new System.EventHandler(this.filter_btn_Click);
+            // 
+            // mail_pass_buffer
+            // 
+            this.mail_pass_buffer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mail_pass_buffer.Location = new System.Drawing.Point(18, 19);
+            this.mail_pass_buffer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mail_pass_buffer.Name = "mail_pass_buffer";
+            this.mail_pass_buffer.Size = new System.Drawing.Size(194, 118);
+            this.mail_pass_buffer.TabIndex = 26;
+            this.mail_pass_buffer.Text = "mail:pass из буфера";
+            this.mail_pass_buffer.UseVisualStyleBackColor = true;
+            this.mail_pass_buffer.Click += new System.EventHandler(this.mail_pass_buffer_Click);
+            // 
+            // mail_pass_file
+            // 
+            this.mail_pass_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mail_pass_file.Location = new System.Drawing.Point(16, 147);
+            this.mail_pass_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mail_pass_file.Name = "mail_pass_file";
+            this.mail_pass_file.Size = new System.Drawing.Size(194, 118);
+            this.mail_pass_file.TabIndex = 27;
+            this.mail_pass_file.Text = "mail:pass из файла";
+            this.mail_pass_file.UseVisualStyleBackColor = true;
+            this.mail_pass_file.Click += new System.EventHandler(this.mail_pass_file_Click);
+            // 
+            // left_btn2
+            // 
+            this.left_btn2.Enabled = false;
+            this.left_btn2.Location = new System.Drawing.Point(788, 525);
+            this.left_btn2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.left_btn2.Name = "left_btn2";
+            this.left_btn2.Size = new System.Drawing.Size(46, 32);
+            this.left_btn2.TabIndex = 32;
+            this.left_btn2.Text = "...";
+            this.left_btn2.UseVisualStyleBackColor = true;
+            this.left_btn2.Click += new System.EventHandler(this.filter_btn_Click);
+            // 
+            // left_tb
+            // 
+            this.left_tb.Location = new System.Drawing.Point(641, 526);
+            this.left_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.left_tb.Name = "left_tb";
+            this.left_tb.ReadOnly = true;
+            this.left_tb.Size = new System.Drawing.Size(136, 26);
+            this.left_tb.TabIndex = 31;
+            // 
+            // left_lbl
+            // 
+            this.left_lbl.AutoSize = true;
+            this.left_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.left_lbl.Location = new System.Drawing.Point(466, 537);
+            this.left_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.left_lbl.Name = "left_lbl";
+            this.left_lbl.Size = new System.Drawing.Size(71, 17);
+            this.left_lbl.TabIndex = 30;
+            this.left_lbl.Text = "Осталось";
+            // 
+            // macAddresses
+            // 
+            this.macAddresses.FormattingEnabled = true;
+            this.macAddresses.ItemHeight = 20;
+            this.macAddresses.Location = new System.Drawing.Point(468, 19);
+            this.macAddresses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.macAddresses.Name = "macAddresses";
+            this.macAddresses.Size = new System.Drawing.Size(363, 264);
+            this.macAddresses.TabIndex = 33;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Location = new System.Drawing.Point(468, 294);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 112);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "mail:pass из буфера";
+            this.button1.Size = new System.Drawing.Size(181, 51);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Заблокировать";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(147, 12);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Location = new System.Drawing.Point(658, 294);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 196);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Настройки";
+            this.button2.Size = new System.Drawing.Size(174, 51);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Разблокировать";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listView1
+            // adress_lbl
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(283, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(265, 196);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.adress_lbl.AutoSize = true;
+            this.adress_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.adress_lbl.Location = new System.Drawing.Point(470, 360);
+            this.adress_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.adress_lbl.Name = "adress_lbl";
+            this.adress_lbl.Size = new System.Drawing.Size(55, 17);
+            this.adress_lbl.TabIndex = 36;
+            this.adress_lbl.Text = "Адресс";
             // 
-            // label1
+            // address_tb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Потоки";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(147, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.address_tb.Location = new System.Drawing.Point(545, 355);
+            this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.address_tb.Name = "address_tb";
+            this.address_tb.ReadOnly = true;
+            this.address_tb.Size = new System.Drawing.Size(286, 26);
+            this.address_tb.TabIndex = 37;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(11, 260);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Location = new System.Drawing.Point(16, 275);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 50);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Старт";
+            this.button3.Size = new System.Drawing.Size(194, 118);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Прокси-лист (ip:port)";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // proxy_type_group
             // 
-            this.button4.Location = new System.Drawing.Point(147, 260);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 50);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Стоп";
-            this.button4.UseVisualStyleBackColor = true;
+            this.proxy_type_group.Controls.Add(this.proxy_type2);
+            this.proxy_type_group.Controls.Add(this.proxy_type1);
+            this.proxy_type_group.Enabled = false;
+            this.proxy_type_group.Location = new System.Drawing.Point(223, 275);
+            this.proxy_type_group.Name = "proxy_type_group";
+            this.proxy_type_group.Size = new System.Drawing.Size(192, 117);
+            this.proxy_type_group.TabIndex = 39;
+            this.proxy_type_group.TabStop = false;
+            this.proxy_type_group.Text = "Тип прокси";
             // 
-            // button5
+            // proxy_type2
             // 
-            this.button5.Location = new System.Drawing.Point(12, 316);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(265, 50);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Остаток";
-            this.button5.UseVisualStyleBackColor = true;
+            this.proxy_type2.AutoSize = true;
+            this.proxy_type2.Location = new System.Drawing.Point(7, 57);
+            this.proxy_type2.Name = "proxy_type2";
+            this.proxy_type2.Size = new System.Drawing.Size(85, 24);
+            this.proxy_type2.TabIndex = 1;
+            this.proxy_type2.TabStop = true;
+            this.proxy_type2.Text = "Socks-5";
+            this.proxy_type2.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // proxy_type1
             // 
-            this.button6.Location = new System.Drawing.Point(283, 214);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(129, 40);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(419, 214);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(129, 40);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(326, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(419, 260);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(419, 286);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 293);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "label3";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(419, 312);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(326, 319);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "label4";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(419, 338);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(130, 20);
-            this.textBox5.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(326, 345);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "label5";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(418, 364);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 20);
-            this.textBox6.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(325, 371);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "label6";
+            this.proxy_type1.AutoSize = true;
+            this.proxy_type1.Location = new System.Drawing.Point(7, 31);
+            this.proxy_type1.Name = "proxy_type1";
+            this.proxy_type1.Size = new System.Drawing.Size(85, 24);
+            this.proxy_type1.TabIndex = 0;
+            this.proxy_type1.TabStop = true;
+            this.proxy_type1.Text = "Socks-4";
+            this.proxy_type1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(856, 623);
+            this.Controls.Add(this.proxy_type_group);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.address_tb);
+            this.Controls.Add(this.adress_lbl);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.macAddresses);
+            this.Controls.Add(this.left_btn2);
+            this.Controls.Add(this.left_tb);
+            this.Controls.Add(this.left_lbl);
+            this.Controls.Add(this.mail_pass_file);
+            this.Controls.Add(this.mail_pass_buffer);
+            this.Controls.Add(this.files_btn);
+            this.Controls.Add(this.invalid_btn);
+            this.Controls.Add(this.valid_btn);
+            this.Controls.Add(this.files_tb);
+            this.Controls.Add(this.files_lbl);
+            this.Controls.Add(this.invalid_tb);
+            this.Controls.Add(this.invalid_lbl);
+            this.Controls.Add(this.valid_tb);
+            this.Controls.Add(this.valid_lbl);
+            this.Controls.Add(this.accounts_tb);
+            this.Controls.Add(this.accounts_lbl);
+            this.Controls.Add(this.left_btn);
+            this.Controls.Add(this.stop_btn);
+            this.Controls.Add(this.start_btn);
+            this.Controls.Add(this.threads_tb);
+            this.Controls.Add(this.threads_lbl);
+            this.Controls.Add(this.settings_btn);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MailDownloader (Host)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.proxy_type_group.ResumeLayout(false);
+            this.proxy_type_group.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button settings_btn;
+        private System.Windows.Forms.Label threads_lbl;
+        private System.Windows.Forms.TextBox threads_tb;
+        private System.Windows.Forms.Button start_btn;
+        private System.Windows.Forms.Button stop_btn;
+        private System.Windows.Forms.Button left_btn;
+        private System.Windows.Forms.Label accounts_lbl;
+        private System.Windows.Forms.TextBox accounts_tb;
+        private System.Windows.Forms.TextBox valid_tb;
+        private System.Windows.Forms.Label valid_lbl;
+        private System.Windows.Forms.TextBox invalid_tb;
+        private System.Windows.Forms.Label invalid_lbl;
+        private System.Windows.Forms.TextBox files_tb;
+        private System.Windows.Forms.Label files_lbl;
+        private System.Windows.Forms.Button valid_btn;
+        private System.Windows.Forms.Button files_btn;
+        private System.Windows.Forms.Button invalid_btn;
+        private System.Windows.Forms.Button mail_pass_buffer;
+        private System.Windows.Forms.Button mail_pass_file;
+        private System.Windows.Forms.Button left_btn2;
+        private System.Windows.Forms.TextBox left_tb;
+        private System.Windows.Forms.Label left_lbl;
+        private System.Windows.Forms.ListBox macAddresses;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label adress_lbl;
+        private System.Windows.Forms.TextBox address_tb;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox proxy_type_group;
+        private System.Windows.Forms.RadioButton proxy_type2;
+        private System.Windows.Forms.RadioButton proxy_type1;
     }
 }
 

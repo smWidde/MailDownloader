@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Net;
 
 namespace MailSorter
 {
@@ -14,6 +15,24 @@ namespace MailSorter
         public Mail()
         {
 
+        }
+        public Mail(string template)
+        {
+            string[] res = template.Split(':');
+            if (res.Length >= 2)
+            {
+                string pass = res[1];
+                for (int j = 2; j < res.Length; j++)
+                {
+                    pass += ":" + res[j];
+                }
+                Email = res[0];
+                Pass = pass;
+            }
+            else
+            {
+                Email = template;
+            }
         }
         public Mail(string email, string pass)
         {
@@ -31,6 +50,27 @@ namespace MailSorter
     }
     class Program
     {
+        private static void mailsFromText(string[] mails_str, out List<Mail> mails)
+        {
+            mails = new List<Mail>();
+            for (int i = 0; i < mails_str.Length; i++)
+            {
+                string[] res = mails_str[i].Split(':');
+                if (res.Length >= 2)
+                {
+                    string pass = res[1];
+                    for (int j = 2; j < res.Length; j++)
+                    {
+                        pass += ":" + res[j];
+                    }
+                    mails.Add(new Mail(res[0], pass));
+                }
+                else
+                {
+                    mails.Add(new Mail(mails_str[i], null));
+                }
+            }
+        }
         static void Main(string[] args)
         {
             string path;
@@ -55,41 +95,62 @@ namespace MailSorter
                 Console.ReadLine();
                 return;
             }
-            string[] mails_str = File.ReadAllLines(path);
-            List<Mail> mails = new List<Mail>();
-            for (int i = 0; i < mails_str.Length; i++)
-            {
-                string[] res = mails_str[i].Split(':');
-                if (res.Length != 2)
-                {
-                    Console.WriteLine("Wrong mail format");
-                    Console.WriteLine("line " + i + ": " + mails_str[i]);
-                    Console.ReadLine();
-                    return;
-                }
-                mails.Add(new Mail(res[0], res[1]));
-            }
+            FileInfo f = new FileInfo(path);
+            string save_path = f.DirectoryName + "\\" + Path.GetFileNameWithoutExtension(path) + "_sorted";
+            Directory.CreateDirectory(save_path);
             try
             {
-                Mail[] sorted_mails = mails.OrderBy(x => x.Email.Split('@')[1]).ToArray();
-                FileInfo f = new FileInfo(path);
-                string save_path = f.DirectoryName + "\\" + Path.GetFileNameWithoutExtension(path) + "_sorted" + f.Extension;
-                using (StreamWriter sw = File.CreateText(save_path))
+                List<string> filters = GetFilters();
+                using (StreamReader reader = new StreamReader(path))
                 {
-                    foreach (Mail i in sorted_mails)
+                    int i = 0;
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        sw.WriteLine(i);
+                        Mail tmp = new Mail(line);
+                        string country = tmp.Email.Split('@').Last().Split('.').Last();
+                        if(CheckDomain(filters, country))
+                        {
+                            try
+                            {
+                                File.AppendAllText(save_path + "\\" + country + ".txt", line + "\n");
+                                Console.Write(++i);
+                                Console.CursorLeft = 0;
+                            }
+                            catch (Exception ex)
+                            {
+                                File.AppendAllText(save_path + "\\" + "other.text", line + "\n");
+                                Console.WriteLine("Error in line " + i + "(" + line + "):" + ex.Message);
+                                Console.Write(++i);
+                                Console.CursorLeft = 0;
+                            }
+                        }
                     }
                 }
-                Console.WriteLine("Sorted version is here: " + save_path);
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch(Exception ex)
             {
-                Console.WriteLine(ex.ActualValue);
-                Console.ReadLine();
-                return;
+                Console.WriteLine(ex.Message);
             }
+            Console.WriteLine("Sort dir is here: " + save_path);
             Console.ReadLine();
+        }
+        private static List<string> GetFilters()
+        {
+            List<string> filters = new List<string>();
+            Console.WriteLine("Enter filters using 'Enter' in end put '/0' to end input or to select all, if at beginning:");
+            string str;
+            while ((str=Console.ReadLine())!="/0")
+            {
+                filters.Add(str);
+            }
+            return filters;
+        }
+        private static bool CheckDomain(List<string> filters, string domain)
+        {
+            if (filters.Count == 0)
+                return true;
+            return filters.Find(x => x == domain) != null;
         }
     }
 }
